@@ -429,25 +429,70 @@ section {
     margin-bottom: 3rem;
     color: var(--second-bg-color);
 }
-.contact form{
+.contact {
+    padding: 3rem 15%; /* Reduce padding to make it smaller */
+    min-height: 30vh; /* Adjust height */
+    text-align: center;
+}
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
-    margin: 5rem 0;
-    text-align: center;
+    flex-direction: column;
+    gap: 2rem;
 }
-.contact form .input-box input,
-.contact form textarea{
-    width: 100%;
-    padding: 2.5rem;
-    font-size: 1.8rem;
-    color: var(--second-bg-color);
-    background-color: var(--text-color);
-    border-radius: 2rem;
-    border: 2px solid var(--main-color);
-    margin: 1.5rem 0;
+
+.contact-icon img {
+    width: 150px; /* Adjust size of the icon */
+    height: auto;
 }
+
+.contact-info p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.emaill {
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.emaill i {
+    color: var(--main-color);
+    margin-right: 8px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--bg-color);
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+.social-links i {
+    margin-right: 8px;
+}
+
+
 .footer{
     background-color: var(--second-bg-color);
     padding: 50px 0;
@@ -475,6 +520,9 @@ section {
     text-align: center;
     margin-top: 40px;
     font-size: 16px;
+}
+.contact-info {
+    text-align: center;
 }
 /* General Styles */
 body {

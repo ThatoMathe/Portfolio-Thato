@@ -11,3 +11,4 @@ window.addEventListener('resize', () => {
         menuIcon.classList.remove('bx-x');
     }
 });
+
