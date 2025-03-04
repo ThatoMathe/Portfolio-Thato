@@ -7,6 +7,26 @@
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
 }
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: var(--bg-color); /* Use your theme's background color */
+}
+
+/* Handle (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background: var(--main-color); /* Use your theme's yellow color */
+    border-radius: 5px; /* Round the corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color); /* Use your theme's accent color */
+}
 
 /* Colors */
 :root {
@@ -224,12 +244,17 @@ section {
 }
 
 /* Slider */
-/* Slider Container */
+.tech-stack {
+    background-color: var(--second-bg-color); 
+    padding: 30px 0; 
+    margin: 0;
+}
+
 .slider {
     position: relative;
-    width: 80%; /* Adjust width to make it smaller */
-    height: 120px; /* Adjust height to make it more compact */
-    margin: 0 auto; /* Center the slider */
+    width: 80%; 
+    height: 120px; 
+    margin: 0 auto; 
     overflow: hidden;
     mask-image: linear-gradient(
         to right,
