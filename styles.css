@@ -9,23 +9,23 @@
 }
 /* Customize the scrollbar */
 ::-webkit-scrollbar {
-    width: 10px; /* Width of the scrollbar */
+    width: 10px; 
 }
 
 /* Track (the background of the scrollbar) */
 ::-webkit-scrollbar-track {
-    background: var(--bg-color); /* Use your theme's background color */
+    background: var(--bg-color); 
 }
 
 /* Handle (the draggable part of the scrollbar) */
 ::-webkit-scrollbar-thumb {
-    background: var(--main-color); /* Use your theme's yellow color */
-    border-radius: 5px; /* Round the corners */
+    background: var(--main-color);
+    border-radius: 5px; 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-color); /* Use your theme's accent color */
+    background: var(--accent-color); 
 }
 
 /* Colors */
@@ -33,8 +33,8 @@
     --bg-color: #080808;
     --second-bg-color: #101010;
     --text-color: white;
-    --accent-color: #2ECC71; /* Emerald Green */
-    --main-color: #FFEB3B; /* Lemon Yellow */
+    --accent-color: #2ECC71; 
+    --main-color: #FFEB3B; 
 }
 
 /* Base Styles */
@@ -47,6 +47,32 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-size: 1.6rem;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.back-to-top:hover {
+    background-color: var(--accent-color);
+}
+
+.back-to-top.show {
+    display: flex; 
 }
 
 /* Header */
@@ -154,8 +180,8 @@ section {
 }
 
 .home-content h3 {
-    font-size: 1.8rem;  /* Decreased the font size */
-    font-weight: normal;  /* Makes the text not bold */
+    font-size: 1.8rem;  
+    font-weight: normal; 
     margin: 1rem 0;
 }
 
@@ -267,8 +293,8 @@ section {
     z-index: 1;
     background: linear-gradient(135deg, var(--main-color), var(--accent-color));
     box-shadow: 0 0 20px rgba(255, 235, 59, 0.5);
-    border-radius: 15px; /* Add rounded corners */
-    padding: 10px; /* Add some padding */
+    border-radius: 15px;
+    padding: 10px; 
 }
 
 /* List Container */
@@ -344,10 +370,9 @@ section {
 /* Pause Animation on Hover */
 .slider:hover .item {
     animation-play-state: paused;
-    filter: grayscale(1); /* Apply grayscale effect on hover */
+    filter: grayscale(1); 
 }
 
-/* Remove Grayscale Effect on Individual Item Hover */
 .slider .item:hover {
     filter: grayscale(0);
 }
@@ -358,7 +383,7 @@ section {
     }
 
     .slider .list .item i {
-        font-size: 36px; /* Smaller icons for mobile */
+        font-size: 36px; 
     }
 }
 
@@ -540,6 +565,93 @@ section {
     background-color: var(--second-bg-color);
     color: var(--main-color);
     box-shadow: 0 0 10px var(--main-color);
+}
+
+/* Certificates Section */
+.certificates {
+    background-color: var(--second-bg-color);
+    padding: 50px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.certificates .heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 400px; 
+    position: relative;
+    overflow: hidden;
+}
+
+.certificate-card {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate-card img {
+    width: 100%;
+    max-width: 200px; 
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.certificate-card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.certificate-card p {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.certificate-card .btn {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.certificate-card .btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--main-color);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: var(--accent-color);
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+    background-color: var(--main-color);
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--accent-color);
+    opacity: 1;
 }
 
 /* Contact */

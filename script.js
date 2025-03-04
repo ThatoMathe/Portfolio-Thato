@@ -37,3 +37,37 @@ playButton.addEventListener('click', () => {
         item.style.animationPlayState = 'running';
     });
 });
+const backToTopButton = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopButton.classList.add('show');
+    } else {
+        backToTopButton.classList.remove('show');
+    }
+});
+
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+// Initialize Swiper
+const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    slidesPerView: 1, // Show 1 slide at a time
+    spaceBetween: 20, // Space between slides
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2, // Show 2 slides on tablets
+        },
+        1024: {
+            slidesPerView: 3, // Show 3 slides on desktops
+        },
+    },
+});
